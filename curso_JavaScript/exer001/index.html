@@ -25,6 +25,7 @@
             background-color: aliceblue;
             width: 80vw;
             margin: auto;
+            margin-top: 20px;
         }
 
 
@@ -58,10 +59,17 @@
     
 
     
-    var nome = window.prompt("Digite seu nome:");
-    window.prompt("Seja bem vindo " + nome + ", estamos a disposição");
+    /*var nome = window.prompt("Digite seu nome:");
+    window.prompt("Seja bem vindo " + nome + ", estamos a disposição");*/
 
-    
+    var n1 = Number.parseFloat(window.prompt("Digite um número"));
+    var n2 = Number.parseFloat(window.prompt("Digite outro número"));
+
+    var result = n1+n2;
+    window.prompt("A soma dos valores é: " +  result);
+
+
+
  
 </script>
 </html> 
