@@ -27,31 +27,38 @@
 </head>
 <body>
     <h1>Eventos DOM</h1>
-    <div id="area" onmouseenter="entrou()" onmouseout="saiu()" onmousedown="clicou()" onmouseup="sclick()">
+    <div id="area">
         interaja
     </div>
 
     <script>
 
         var back = window.document.getElementById('area');
+        back.addEventListener('mouseenter', entrou);
+        back.addEventListener('mouseout', saiu);
+        back.addEventListener('mousedown', clicou);
+        back.addEventListener('mouseup', sclick);
 
         function entrou(){
             back.style.background = 'blue';
             back.style.color = 'black';
+            back.innerText = "interaja";
         }
 
         function saiu(){
             back.style.background = 'blueviolet';
             back.style.color = 'white';
+            back.innerText = "interaja";
         }
 
         function clicou(params) {
             back.style.background = 'orange';
-            back.w
+            back.innerHTML = "Clicou";
         }
         
         function sclick(params) {
             back.style.background = 'blue';
+            back.innerText = "interaja";
         }
     </script>
 </body>
