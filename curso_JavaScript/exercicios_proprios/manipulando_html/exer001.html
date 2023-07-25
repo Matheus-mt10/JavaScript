@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+     <!--Altere o texto do elemento h1 para "Texto Alterado!" quando o botão for clicado -->
+
+     <h1 id="titulo">Texto Inicial</h1>
+     <button id="botao" onmousedown="clicou()" onmouseup="textoInicial()">Clique Aqui!</button>
+    
+<script>
+    
+    var titulo = window.document.getElementById('titulo');
+    var botao =  window.document.getElementById('botao');
+
+    function clicou(params) {
+       titulo.innerHTML =  "Texto Alterado!";
+    }
+
+    function textoInicial(params) {
+        titulo.innerHTML = "Texto Inicial";
+    }
+
+
+    
+
+
+</script>   
+</body>
+</html>

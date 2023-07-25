@@ -6,6 +6,29 @@
     <title>Eventos em DOM exemplo 2</title>
 </head>
 <body>
+    <input type="number" name="cn1" id="icn1"> <strong>+</strong>
+    <input type="number" name="cn2" id="icn2">
+    <input type="button" value="Somar" onclick="somar()">
+
+    <div id="res">O resultado da soma é: </div>
+
+<script>
+
     
+    
+    function somar(params) {
+    
+        var cn1 = window.document.getElementById('icn1');
+        var cn2 = window.document.getElementById('icn2');
+        var res = window.document.getElementById('res');
+        var n1 = Number(icn1.value);
+        var n2 = Number(icn2.value);
+        var soma = n1+n2;
+        res.innerHTML = `O resultado da soma entre ${n1} e ${n2} é: ${soma}`
+    
+    }
+
+</script>
+
 </body>
 </html>
