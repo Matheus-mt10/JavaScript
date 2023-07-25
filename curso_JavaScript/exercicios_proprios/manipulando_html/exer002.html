@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2 </title>
+
+<style>
+    body{
+        background-color: black;
+    }
+    div#area{
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        margin: auto;
+    }
+</style>
+</head>
+<body>
+     <!--
+         Exercício 3: Alterando a cor de fundo com o movimento do mouse
+
+         Objetivo: Alterar a cor de fundo de um elemento com base no movimento do mouse.
+        
+    -->
+   <div id="area" onmousemove="movimento()" onmouseout="saiu()" onclick="clique"></div>
+
+
+<script>
+    var area = window.document.getElementById('area');
+
+    function movimento(params) {
+        area.style.backgroundColor = 'red';
+    }
+
+    function saiu(params) {
+        area.style.backgroundColor = 'aqua';
+    }
+
+    function clique(params) {
+        area.style.backgroundColor = 'white';
+    }
+  
+    
+   
+
+
+
+</script>
+</body>
+</html>
