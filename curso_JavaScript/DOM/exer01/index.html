@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudos em DOM</title>
-    <!--CSS inline-->
+    <title>Iniciando os estudos em DOM</title>
     <style>
         body{
-            background-color: antiquewhite;
+            background-color: blueviolet;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
     </style>
 </head>
 <body>
+
     <h1>Iniciando os estudos em DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p> Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div> 
+    <p>Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div>Clique em mim</div>
 
-    <!--Scripts para o JavaScript-->
-<script>
-    
-    var corpo = window.document.getElementsByTagName('body')[0];
-    var p1 = window.document.getElementsByTagName('p')[0];
-    p1.style.color = 'blue';
-    corpo.style.background = 'red';
-    
+    <script>
 
-</script>
+        var corpo = window.document.querySelector("body");
+        corpo.style.background='TOMATO';
+
+        var p = window.document.getElementsByTagName('p')[0];
+
+        window.document.write(p.innerText);
+        p.style.color = 'red';
+        
+
+    </script>
 </body>
 </html>
