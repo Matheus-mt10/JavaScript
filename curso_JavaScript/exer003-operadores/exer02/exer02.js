@@ -1,8 +1,14 @@
-var pais = 'In';
+var pais = window.document.getElementById('txp');
+var resultado = window.document.getElementById('resultado');
 
-if (pais=='Brasil') {
-    console.log(`O indivíduo é cidadão do(a) ${pais}`)
-}
-else{
-    console.log('O cidadão é estrageiro');
+
+// eslint-disable-next-line no-unused-vars
+function calc() {
+
+    if (pais ==='Brasil') {
+        resultado.innerHTML = `Você é Brasileiro ou Brasileira :) `
+    }
+    else{
+        resultado.innerHTML = `Você Estrangeiro ou Estrangeira :) `
+    }
 }
