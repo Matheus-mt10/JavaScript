@@ -1,9 +1,9 @@
 /* 1 - Clinico Geral | 2 - Pediatria | 3 - Geriatria | 4 - Ortopedia | 5 - Urologia | 6 - Emergência | 7 - Unidade de terapia intensiva (UTI) */
 
- var num-day = 6 ;
+ var numday = 0 ;
 
- switch (num-day) {
-    case 0: console.log("O dia número digitado corresponde ao Domingp")
+ switch (numday) {
+    case 0: console.log("O dia número digitado corresponde ao Domingo")
         break;
     case 1: console.log("O dia número digitado corresponde a segunda-feira")
         break;
