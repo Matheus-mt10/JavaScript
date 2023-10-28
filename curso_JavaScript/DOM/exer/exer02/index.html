@@ -13,8 +13,18 @@
 
     <script>
 
-        var circle = window.document.getElementById("circle");
-        circle.style.background = "#daa520";
+        var circle = window.document.getElementById('circle');
+        circle.addEventListener("mouseenter", entrou);
+        circle.addEventListener("mouseout", saiu);
+
+
+        function entrou() {
+            circle.style.background = "green";
+        }
+
+        function saiu(){
+            circle.style.background = "blueviolet"
+        }
         
 
 
