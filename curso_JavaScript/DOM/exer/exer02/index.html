@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="circle"></div>
+    <div id="circle">
+        Interaja...
+    </div>
     <div></div>
     <div></div>
 
@@ -16,14 +18,22 @@
         var circle = window.document.getElementById('circle');
         circle.addEventListener("mouseenter", entrou);
         circle.addEventListener("mouseout", saiu);
+        circle.addEventListener("click", clicou);
 
 
         function entrou() {
-            circle.style.background = "green";
+            circle.style.background = "lightblue";
+            circle.innerText = "Entrou";
         }
 
         function saiu(){
-            circle.style.background = "blueviolet"
+            circle.style.background = "blueviolet";
+            circle.innerText = " Interaja...";
+        }
+
+        function clicou() {
+            circle.style.background = "red";
+            circle.innerHTML = "Clicou";
         }
         
 
