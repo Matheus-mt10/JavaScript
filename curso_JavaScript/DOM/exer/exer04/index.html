@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inserindo elementos na lista</title>
+</head>
+<body>
+    <main>
+        <div class="content-list">
+            <ul id="list">
+
+            </ul>
+        <button id="button">
+            
+        </button>
+        </div>
+
+        
+    </main>
+
+    <script>
+        var list = window.document.getElementById('list');
+        var button = window.document.getElementById('button');
+
+        button.addEventListener("click", addItenList);
+
+        function addItenList() {
+            list.innerHTML = "<li>Pão</li>"
+        }
+       
+        
+        
+    </script>
+</body>
+</html>
