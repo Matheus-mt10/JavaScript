@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+
+<body>
+    <h1>Consultando multas</h1>
+     verificação: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" click="calcular()">
+    <div id="situa"></div>
+    
+    <script>
+       
+       var txtvel = window.document.getElementById('txtvel');
+       var situa = window.document.getElementById('situa');
+       var res = Number(txtvel.value);
+
+       function consultar() {
+        situa.innerHTML = `<p> velocidade: ${res}</p>`
+       }
+
+    </script>
+</body>
+</html>
