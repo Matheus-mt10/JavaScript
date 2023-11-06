@@ -7,7 +7,31 @@
 </head>
 <body>
     <h1>Sistema de multas</h1>
-    velocidade do carro: <input type="number" name="txtn1" id="txtvel"> km/h
-    <input type="button" value="Verificar">
+    velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="Verificar" id="verificar">
+    <div id="result">
+        A velocidade do carro é de: 
+    </div>
+
+    <script>
+        var verificar = window.document.querySelector('input#verificar').addEventListener("click", verificar)
+
+        function verificar() {
+            var txtvel = window.document.querySelector('input#txtvel');
+            var result = window.document.querySelector('div#result');
+            var vel = Number(txtvel.value);
+
+            if (vel > 60) {
+                result.innerHTML = `A velocidade do carro é de: <strong>${vel} Km/h.</strong>`
+                result.innerHTML += "<p>Você foi multado. DIRIJA COM CUIDADO E USE O CINTO  </p>"
+            } else {
+                result.innerHTML = `<p>A velocidade do carro é de: ${vel} Km/h </p>`
+                result.innerHTML += `<p>Dirija com cuidade e use sempre o cinto</p>`
+            }
+
+            
+        }
+    </script>
+
 </body>
 </html>
