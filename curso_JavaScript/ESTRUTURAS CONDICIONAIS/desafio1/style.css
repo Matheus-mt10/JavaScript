@@ -24,3 +24,21 @@ footer{
 text-align: center;
 color: white;
 }
+
+img{
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    text-align: center;
+}
+
+div#msg{
+    text-align: center;
+    padding: 10px;
+}
+
+div#foto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
