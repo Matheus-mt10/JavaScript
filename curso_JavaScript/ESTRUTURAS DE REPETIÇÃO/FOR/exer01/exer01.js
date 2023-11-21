@@ -5,8 +5,5 @@ enviar.addEventListener("click", VerificarNumero);
 
 function VerificarNumero() {
 
-for( var i=0; i <=5; i++){
-
-}
 
 }
