@@ -6,24 +6,73 @@
     <title>Conhecendo Eventos de Clique no DOM</title>
     <style>
         body{
+            height: 100vh;
             background-color: #c3c3c3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: aqua;
-            width: 20%;
-            height: 40%;
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            font-weight: 600;
+            border: 2px solid black;
         }
     </style>
 </head>
 <body>
     
     <div id="container">
-        Clique Aqui
+        Interaja...
     </div>
 
 
 <script>
+
+    var container = window.document.querySelector('div#container');
+    container.addEventListener("click", clicou);
+    container.addEventListener("mouseenter", entrou);
+    container.addEventListener("mouseout", saiu);
+    container.addEventListener("dblclick", dbClick)
+    container.addEventListener("mousedown", pressClick)
+
+    function dbClick(params) {
+        container.innerHTML = "Duplo clique"
+        container.style.background = "orange"
+    }
+
+    function clicou() {
+        container.innerHTML = "Clicou";
+        container.style.background = 'red'
+        container.style.color = "black"
+    }
+
+    function entrou(params) {
+        container.innerHTML = "Entrou";
+        container.style.background = 'blue'
+        container.style.color = "white"
+    }
+
+    function saiu(params) {
+        container.innerHTML = "Saiu";
+        container.style.background = "aqua"
+        container.style.color = "black"
+    }
+
+    function pressClick(){
+        container.innerHTML = "Clique pressionado";
+        container.style.background = "tomato"
+        
+    }
+
+    
+
 
 </script>
 
