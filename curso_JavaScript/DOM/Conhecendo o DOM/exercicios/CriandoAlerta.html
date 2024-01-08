@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Alerta</title>
+    <style>
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        button{
+            background-color: blue;
+            width: 60%;
+            height: 30%;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="botao">Clique Aqui</button>
+
+<script>
+    
+    var botao = window.document.querySelector('button#botao');
+    botao.addEventListener("click", exibirAlerta);
+
+    function exibirAlerta(params) {
+        botao = alert("Clicou");
+    }
+
+
+
+</script>
+</body>
+</html>
