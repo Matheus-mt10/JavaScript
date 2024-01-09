@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com a Lista</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        ul{
+            background-color: antiquewhite;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li{
+            font-size: 24px;
+        }
+
+        li:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <ul>
+        <li id="item1" >Item 1</li>
+        <li id="item2" >Item 2</li>
+        <li id="item3" >Item 3</li>
+    </ul>
+
+    <script>
+        var item1 = window.document.querySelector('li#item1');
+        var item2 = window.document.querySelector('li#item2');
+        var item3 = window.document.querySelector('li#item3');
+
+        item1.addEventListener("click", clicou1);
+        item2.addEventListener("click", clicou2);
+        item3.addEventListener("click", clicou3);
+
+        function clicou1(params) {
+            item1.innerHTML = "CLICOU"
+        }
+
+        function clicou2(params) {
+            item2.innerHTML = "CLICOU";
+        }
+
+        function clicou3(params) {
+            item3.innerHTML = "CLICOU"
+        }
+
+    </script>
+</body>
+</html>
