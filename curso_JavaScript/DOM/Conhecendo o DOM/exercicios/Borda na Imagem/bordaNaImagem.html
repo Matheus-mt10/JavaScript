@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+
+    <img id="super" src="super.jpg" alt="">
+
+
+    
+    <script>
+        var superr = window.document.querySelector('img#super');
+        superr.addEventListener("mouseenter", mouseEnter);
+        superr.addEventListener("mouseout", mouseOut)
+        
+        function mouseEnter(){
+            superr.style.border = '12px groove #b550ff';
+        }
+
+        function mouseOut(params) {
+            superr.style.border = 'none';
+        }
+
+    </script>
+</body> 
+</html>
