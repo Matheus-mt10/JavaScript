@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando paragráfo com botões</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #text{
+            max-width: 75%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .containerButtons{
+            margin: 10px;
+        }
+
+        #btn1{
+            margin: 0px 10px;
+            background-color: blue;
+            padding: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #btn2{
+            margin: 0px 10px;
+            background-color:blueviolet;
+            padding: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #btn3{
+            margin: 0px 10px;
+            background-color: chocolate;
+            padding: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        #reset{
+            margin: 0px 10px;
+            background-color: #c3c3c3;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus a, provident laborum deleniti delectus distinctio maiores, dolore animi quia totam incidunt, dicta magnam tenetur autem optio ratione sunt amet culpa.</p>
+
+    <div class="containerButtons">
+        <button id="btn1">Botão 1</button>
+        <button id="btn2">Botão 2</button>
+        <button id="btn3">Botão 3</button>
+        <button id="reset">Resetar</button>
+    </div>
+<script>
+    var text = window.document.querySelector('p#text');
+    var btn1 = window.document.querySelector('button#btn1');
+    var btn2 = window.document.querySelector('button#btn2');
+    var btn3 = window.document.querySelector('button#btn3');
+    var reset = window.document.querySelector('button#reset');
+
+    btn1.addEventListener("click", btn1Text);
+    btn2.addEventListener("click", btn2Text);
+    btn3.addEventListener("click", btn3Text);
+    reset.addEventListener("click", resett);
+
+    function btn1Text(params) {
+        text.innerHTML = "O Botão 1 foi pressionado";
+        text.style.background = "blue";
+        text.style.color = 'white';
+    }
+
+    function btn2Text(params) {
+        text.innerHTML = "O botão 2 foi pressionado";
+        text.style.background = "blueviolet";
+        text.style.color = "white";
+    }
+
+    function btn3Text(params) {
+        text.innerHTML = "O botão 3 foi pressionado";
+        text.style.background = "chocolate";
+        text.style.color = "white";
+    }
+
+    function resett(params) {
+        text.innerHTML = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus a, provident laborum deleniti delectus distinctio maiores, dolore animi quia totam incidunt, dicta magnam tenetur autem optio ratione sunt amet culpa."
+
+        text.style.background = "white"
+        text.style.color = "black"
+    }
+
+
+</script>
+
+</body>
+</html>
