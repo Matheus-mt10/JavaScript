@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+            display: flex;
+            flex-flow: column;
+            align-items:center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        p{
+            max-width: 65%;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        button{
+            margin: 20px;
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+
+    <p id="text" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, fuga nobis. Ab veritatis doloribus beatae alias aspernatur doloremque obcaecati tenetur id, a delectus veniam. Quia praesentium vitae blanditiis voluptates expedita.</p>
+    <button id="button" >Clique Aqui</button>
+
+<script>
+
+    var button = window.document.querySelector('button#button');
+    var text = window.document.querySelector('p#text');
     
+    button.addEventListener("click", mudarTexto)
+
+    function mudarTexto() {
+        text.innerHTML = "O botão foi pressionado"
+    }
+
+
+</script>
 </body>
 </html>
