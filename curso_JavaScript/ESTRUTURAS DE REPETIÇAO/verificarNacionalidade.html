@@ -22,7 +22,18 @@
 
     var text = window.document.querySelector('input#txt');
     var button = window.document.querySelector('button#btn')
-    var result = window.document.querySelector('')
+    var result = window.document.querySelector('div#result');
+
+    button.addEventListener("click", verificarNacionalidade);
+
+    function verificarNacionalidade() {
+        if (text != "Brasil") {
+            result.innerHTML = "Você é estrangeiro";
+        }
+        else{
+            result.innerHTML = "Você é brasileiro";
+        }
+    }
 
 </script>
 </body>
