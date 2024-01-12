@@ -8,11 +8,11 @@
 <body>
     <h1>DETRAN - Departamento Estadual de Trânsito</h1>
     <P>Digite a velocidade do veículo para verificar a multa</P>
-    <input type="number" name="num" id="num">
+    <input type="number" name="num" id="txtVel">
     <input type="button" value="Verificar" id="btn">
 
     <div id="res">
-        res aqui
+        Condição:   
     </div>
 
 <script>
@@ -25,10 +25,15 @@
 
     function verificarVelocidade() {
 
-        var vel = Number(tztVel.value)
-        if ( ) {
-            
+        var vel = Number(txtVel.value)
+        if ( vel > 60) {
+            result.innerHTML = `<p>Você foi multado a velocidade permitida é <strong>60 Km/h</strong></P>. Sua velocidade era de:<strong>${vel}</strong>`
         }
+        else{
+            result.innerHTML = `<p>Velocidade normal. Use sempre o cinto de segurança</p>`
+        }
+
+
         
     }
 
