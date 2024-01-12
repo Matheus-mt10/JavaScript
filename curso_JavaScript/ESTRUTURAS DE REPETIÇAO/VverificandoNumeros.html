@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificndo númeoros</title>
+</head>
+<body>
+    
+    <input type="number" name="num1" id="num1">
+    <input type="number" name="num2" id="num2"> 
+    <input type="button" value="Verificar" id="btn" >
+    <div id="result">Aguardando os números </div>
+
+<script>
+
+    var num1 = window.document.querySelector('input#num1');
+    var num2 = window.document.querySelector('input#num2');
+    var btn = window.document.querySelector('input#btn');
+    var result = window.document.querySelector('div#result');
+
+    btn.addEventListener("click", verificarNum);
+
+    function verificarNum() {
+
+        num1 = Number(num1.value);
+        num2 = Number(num2.value);
+
+        if (num1 > num2) {
+            result.innerHTML = "O primeiro número é maior que o segundo"
+        }
+        else{
+            result.innerHTML = "O segundo número é maior que o primeiro"
+        }
+    }
+    
+
+</script>
+</body>
+</html>
