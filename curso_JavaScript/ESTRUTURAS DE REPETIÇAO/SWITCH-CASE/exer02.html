@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolhendo o dia da semana</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <input type="text" name="txt" id="txt" >
+    <button type="button" id="btn">Verificar</button>
+
+<script>
+    
+    let btn = window.document.querySelector('button#btn')
+    let txt = window.document.querySelector('input#txt')
+    let result = window.document.querySelector('div#result')
+
+    btn.addEventListener("click", verificarDia)
+
+    function verificarDia(params) {
+        switch (txt) {
+            case "segunda":
+                result.innerHTML = "segunda - dia da semana"
+                break;
+        
+            default:
+                break;
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
