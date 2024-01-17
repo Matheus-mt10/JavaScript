@@ -27,23 +27,27 @@
     <button type="button" id="btn">Verificar</button>
 
 <script>
+    var btn = window.document.querySelector('button#btn')
+    var txt = window.document.querySelector('input#txt')
+    var result = window.document.querySelector('div#result')
     
-    let btn = window.document.querySelector('button#btn')
-    let txt = window.document.querySelector('input#txt')
-    let result = window.document.querySelector('div#result')
-
     btn.addEventListener("click", verificarDia)
 
-    function verificarDia(params) {
-        switch (txt) {
+   function verificarDia() {
+    
+        switch (key) {
             case "segunda":
-                result.innerHTML = "segunda - dia da semana"
+                result.innerHTML = "Segunda"
                 break;
         
             default:
                 break;
         }
-    }
+
+
+   }
+ 
+
 
 
 
