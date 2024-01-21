@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="res"></div>
-    <input type="number" name="txt1" id="txt1">
+    <input type="text" name="txt1" id="txt1">
     <button id="btn">Verificar</button>
 
 <script>
@@ -18,14 +18,19 @@
     btn.addEventListener("click", verificar)
 
     function verificar() {
+        
         switch (txt1) {
-            case 1:
-                txt1.innerHTML = "Segunda feira"
+            case "segunda":
+                res.innerHTML="segundaaaa"
                 break;
         
             default:
+                res.innerHTML = "DIGITE UM DIA VÁLIDO"
                 break;
         }
+
+
+
     }
 </script>
 </body>
