@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimindo números</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #res{
+            background-color: aquamarine;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="res">Clique no botão para inserir os números</div>
+    <button id="btn">Clique aqui</button>
+
+
+
+<script>
+
+    let res = window.document.querySelector('div#res')
+    let btn = window.document.querySelector('button#btn')
+
+    btn.addEventListener("click", exibirLista)
+
+    function exibirLista() {
+        for( let i=0; i <= 11; i++){
+            res.innerHTML = `<p>n°${i}</p>`
+        }
+    }
+
+</script>  
+
+</body>
+</html>
