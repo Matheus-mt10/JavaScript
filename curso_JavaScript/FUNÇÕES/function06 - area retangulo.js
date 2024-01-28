@@ -10,4 +10,4 @@ function calcularAreaRetangulo(base,altura) {
     
 }
 
-console.log(`A área do retângulo é: ${calcularAreaRetangulo(12,5)}CM`);
+console.log(`A área do retângulo é: ${calcularAreaRetangulo(12,5)} cm`);
