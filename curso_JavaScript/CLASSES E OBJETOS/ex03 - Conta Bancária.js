@@ -1,11 +1,25 @@
 //  Crie uma classe ContaBancaria com métodos para depositar, sacar e verificar o saldo.
 class ContaBrancaria{
-    constructor(saldoEmConta=0,sacar=0,depositar=0,verificarSaldo=0){
-        this.saldoEmConta = saldoEmConta
-        this.sacar = sacar
-        this.depositar = depositar
-        this.verificarSaldo = verificarSaldo
+    constructor(contaCorrente){
+        this.contaCorrente = contaCorrente
     }
-}
 
-let teste = new ContaBrancaria()
+    deposito(valorDeposito){
+        let contaCorrente = this.contaCorrente
+        let saldo = contaCorrente+valorDeposito 
+        console.log(`O depósito no valor ${valorDeposito}R$ foi realizado com sucesso. saldo da conta:${saldo}`);
+    }
+
+    sacar(valorSaque, saldo=0){
+        let contaCorrente=this.contaCorrente
+        saldo = contaCorrente-valorSaque
+        console.log(`O saque no valor de ${valorSaque}R$ foi realizado com sucesso. Saldo da conta: ${saldo}R$`);
+    }
+    
+}
+   
+let contaItau01 = new ContaBrancaria(100)
+
+console.log(contaItau01);
+contaItau01.sacar(10)
+contaItau01.deposito(10)
