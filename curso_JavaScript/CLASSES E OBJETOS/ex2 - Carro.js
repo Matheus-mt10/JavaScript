@@ -25,14 +25,24 @@ class Carro{
            console.log('O carro está ligado');
         }
         else{
-            console.log('O carro está desligado');
+            console.log('O carro está ligado');
         }
     }
 
-    ligar()
+    ligar(){
+        this.onOf = true
+        console.log('O carro está ligado');
+    }
+
+    desligar(){
+        this.onOf = false
+        console.log('O carro está desligado');
+    }
 }
 
 let carro1 = new Carro("Volksvagem", "Novo Gol 1.6", 2014, "Prata", 55,false)
 
 carro1.infoCarro()
 carro1.verificarLigado()
+carro1.desligar()
+carro1.ligar()
